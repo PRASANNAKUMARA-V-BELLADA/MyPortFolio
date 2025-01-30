@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Basic Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Container and Row */
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        /* Optional padding for the container */
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        /* Space between columns */
+      }
+
+      /* Column Styles */
+      .col-1 {
+        flex: 0 0 calc(100% / 12 - 10px);
+        /* 1/12th of the width */
+        padding: 20px;
+        text-align: center;
+      }
+
+      .col-2 {
+        flex: 0 0 calc(100% / 12 * 2 - 10px);
+        /* 2/12th (or 1/6th) of the width */
+      }
+
+      .col-3 {
+        flex: 0 0 calc(100% / 12 * 3 - 10px);
+        /* 3/12th of the width */
+      }
+
+      .col-4 {
+        flex: 0 0 calc(100% / 12 * 4 - 10px);
+        /* 4/12th (or 1/3rd) of the width */
+      }
+
+      .col-5 {
+        flex: 0 0 calc(100% / 12 * 5 - 10px);
+        /* 5/12th of the width */
+      }
+
+      .col-6 {
+        flex: 0 0 calc(100% / 12 * 6 - 10px);
+        /* 6/12th (or 1/2) of the width */
+      }
+
+      .col-7 {
+        flex: 0 0 calc(100% / 12 * 7 - 10px);
+        /* 7/12th of the width */
+      }
+
+      .col-8 {
+        flex: 0 0 calc(100% / 12 * 8 - 10px);
+        /* 8/12th of the width */
+      }
+
+      .col-9 {
+        flex: 0 0 calc(100% / 12 * 9 - 10px);
+        /* 9/12th of the width */
+      }
+
+      .col-10 {
+        flex: 0 0 calc(100% / 12 * 10 - 10px);
+        /* 10/12th of the width */
+      }
+
+      .col-11 {
+        flex: 0 0 calc(100% / 12 * 11 - 10px);
+        /* 11/12th of the width */
+      }
+
+      .col-12 {
+        flex: 0 0 calc(100% / 12 * 12 - 10px);
+        /* Full width */
+      }
+
+      .box {
+        padding: 30px;
+        margin: 20px;
+      }
+
+      #sct1 {
+        display: flex;
+        align-items: center;
+        background-color: #535da1;
+        height: 600px;
+        overflow: hidden;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .menu-icon .cross {
+        display: none;
+      }
+      .item2 {
+        background-color: #14b789;
+        width: 50%;
+        height: 80vh;
+        position: absolute;
+        border-radius: 100%;
+        bottom: 0;
+        margin-left: 300px;
+      }
+      .mainhide {
+        display: none;
+      }
+      .item3 {
+        background-color: #14b789;
+        position: absolute;
+        width: 100%;
+        height: 60vh;
+        bottom: 0;
+      }
+      .crc1 {
+        background-color: #535da1;
+        width: 730px;
+        height: 480px;
+        border-radius: 100%;
+        position: absolute;
+        top: -55px;
+        right: -308px;
+      }
+      .crc2 {
+        background-color: #535da1;
+        width: 830px;
+        height: 480px;
+        border-radius: 100%;
+        position: absolute;
+        top: -149px;
+        left: -390px;
+      }
+      #subsct1 {
+        margin-top: 130px;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 20px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 12px;
+      }
+      .nav,
+      a {
+        color: white;
+      }
+
+      .first {
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .nav {
+        position: fixed;
+        top: 10px;
+        z-index: 1000;
+        left: 80px;
+        right: 80px;
+        width: calc(100% - 160px);
+        padding: 10px;
+        font-size: 23px;
+      }
+      .nav .pno {
+        border-radius: 30px;
+        border: 2px solid white;
+        text-align: center;
+      }
+      #call i {
+        border-radius: 100%;
+        background-color: aliceblue;
+        color: black;
+        padding: 6px;
+      }
+      .nav.scrolled .first {
+        color: black;
+      }
+      .nav.scrolled {
+        background-color: white;
+        color: rgba(51, 55, 63, 0.623);
+        border-radius: 10px;
+        font-size: 23px;
+        box-shadow: 2px 2px 10px 5px;
+      }
+      .nav.scrolled .pno:hover {
+        background-color: #14b789;
+        color: white;
+      }
+      .nav.scrolled a {
+        color: rgb(71, 73, 78);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .nav.scrolled #call i {
+        background-color: #14b789;
+        border-radius: 100%;
+        padding: 6px;
+      }
+
+      .pno:hover {
+        background-color: white;
+        color: #14b789;
+      }
+      .nav.scrolled .pno {
+        border-radius: 30px;
+        border: 2px solid #14b789;
+        color: #14b789;
+      }
+      #img1 {
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+      }
+      #img2 {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+      .box2 {
+        padding: 20px;
+        border: none;
+        background-color: aqua;
+        border-radius: 60px;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .box2:hover {
+        background-color: #4caf50;
+        transform: scale(1.1);
+      }
+
+      .box3 {
+        padding: 20px;
+        background-color: white;
+        margin-bottom: 10px;
+        border-radius: 60px;
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      .smallgap {
+        margin: 10px;
+        padding: 5px;
+      }
+
+      .alignelement {
+        align-items: center;
+        justify-items: center;
+      }
+      .alignleft {
+        margin-left: 80px;
+      }
+      #crc {
+        width: 330px;
+        height: 320px;
+        border-radius: 100%;
+        background-color: whitesmoke;
+        margin-top: 60px;
+        margin-left: 40px;
+      }
+      #man {
+        margin-top: 50px;
+        width: 450px;
+        height: 340px;
+        margin-right: 900px;
+      }
+
+      .boxmargin {
+        margin: 10px;
+      }
+      div#main {
+        height: auto;
+      }
+      body {
+        width: 100%;
+      }
+
+      /*------- section 2------*/
+      #sect2 {
+        margin: 60px;
+        height: auto;
+        padding-left: 10px;
+        padding-bottom: 30px;
+      }
+
+      #h2 {
+        padding: 10px;
+      }
+      #box11 {
+        justify-items: end;
+        align-items: end;
+      }
+      .smallmargin {
+        text-align: right;
+        font-size: 25px;
+      }
+      .mystory {
+        background-color: #14b789;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      #h3 {
+        font-size: 50px;
+      }
+      #story {
+        padding: 10px;
+        line-height: 1.5;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+      }
+
+      /*section 3   */
+      #sect21,
+      #Contact {
+        background-color: #ced3dd56;
+        padding: 60px 0;
+        border-top: 1px solid rgba(160, 160, 175, 0.349);
+        border-bottom: 1px solid rgba(160, 160, 175, 0.349);
+      }
+      .fontis {
+        color: grey;
+        font-size: 18px;
+      }
+      #sect3 {
+        height: auto;
+        padding: 30px 0;
+        margin: 30px 60px;
+      }
+      #h3 {
+        font-size: 35px;
+        padding: 10px 0;
+      }
+      table {
+        border-collapse: separate;
+        border-color: rgba(128, 128, 128, 0.3);
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+      }
+      table th {
+        padding: 10px;
+        text-align: left;
+        font-size: 30px;
+      }
+      th,
+      td {
+        border: none;
+      }
+      th {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+      }
+      td {
+        padding: 10px;
+      }
+      td:nth-child(1) {
+        border-right: 1px solid rgba(128, 128, 128, 0.3);
+      }
+      td:nth-child(2) {
+        font-size: 20px;
+      }
+
+      td:nth-child(1) {
+        width: 20%;
+      }
+      tbody tr:nth-of-type(even) {
+        background-color: white;
+      }
+      #digits3 {
+        font-size: 90px;
+      }
+      #nm3 {
+        font-size: 20px;
+        color: #14b789;
+      }
+      .pd31 {
+        border-bottom: 1px solid rgba(115, 162, 206, 0.3);
+      }
+      .pd32 {
+        text-align: center;
+        border-right: 1px solid rgba(115, 162, 206, 0.3);
+      }
+      .dg {
+        padding: 20px 0;
+      }
+
+      /*  section 4   */
+      .sect4 {
+        height: auto;
+        margin: 60px;
+        padding: 100px 0;
+      }
+      .pd4 {
+        padding: 10px;
+        font-size: 25px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      #img3 {
+        width: 90%;
+        height: 89px;
+        margin-left: 20px;
+        transition: transform 0.3s ease-in;
+      }
+      #img3:hover {
+        transform: scale(1.1);
+      }
+      /*  section 5 */
+      .pd5 {
+        display: flex;
+        font-size: 60px;
+        justify-content: center;
+      }
+
+      .sect5 {
+        padding: 0 150px;
+      }
+      .sect6,
+      .sect7 {
+        margin: 60px;
+      }
+      #About,
+      #Services,
+      #Projects,
+      #Contact {
+        padding: 40px 0;
+        margin: 20px 0;
+      }
+      .img5 {
+        margin-right: 20px;
+        width: 165px;
+        height: 170px;
+        border-radius: 100%;
+      }
+
+      .pd55 {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        overflow: hidden;
+        background-color: white;
+        border: 2px solid transparent;
+        transition: border 0.61s ease-in;
+      }
+
+      .image55:first-child {
+        transform: translateY(50px);
+      }
+      .box55 {
+        position: relative;
+        width: 230px;
+        height: 260px;
+      }
+      .servflex {
+        display: flex;
+        justify-content: space-between;
+      }
+      .hideservice {
+        display: none;
+      }
+      .servicebox {
+        position: absolute;
+        left: 50%;
+        width: 230px;
+        height: 300px;
+        margin-top: 30px;
+        font-size: 80px;
+        text-align: center;
+        border-radius: 10px;
+        padding-top: 30px;
+        transform: rotate(-40deg);
+        border: 1px solid rgba(39, 37, 37, 0.281);
+      }
+      .i5c {
+        transition: background 0.6s ease-in;
+      }
+      .servicebox i {
+        margin-top: 50px;
+      }
+
+      .pd51 {
+        padding: 20px;
+        margin: 10px;
+        font-size: 35px;
+        border-bottom: 2px solid rgba(41, 40, 39, 0.349);
+      }
+      .i5 {
+        background-color: #535da1;
+        border-radius: 40px;
+        padding: 10px;
+        color: white;
+        font-size: 18px;
+      }
+      .pd52 {
+        padding: 20px;
+        font-size: 21px;
+        text-align: justify;
+        line-height: 1.5;
+        color: grey;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .btn55 {
+        border: rgba(128, 128, 128, 0.3);
+        border-radius: 25px;
+        font-size: 20px;
+        padding: 20px;
+        color: #45484d;
+        margin-left: 40px;
+      }
+      .btn55:hover {
+        background-color: #14b789;
+      }
+      .pd55:hover .i5c {
+        background-color: #14b789;
+      }
+      .pd55:hover i {
+        color: aliceblue;
+      }
+      .pd55:hover {
+        border: 2px solid #14b789;
+      }
+      .pd55:hover #crc55 {
+        background-color: #535da1;
+      }
+      .crc56 {
+        position: relative;
+        overflow: hidden;
+      }
+      #crc55 {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        background-color: #14b789;
+      }
+
+      /*---- section 6-------*/
+      .pd66 {
+        padding-left: 10px;
+      }
+      .pj61 {
+        font-family: "Times New Roman", Times, serif;
+        color: #14b789;
+      }
+      .pj62 {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .pj63 {
+        width: 300px;
+        height: 340px;
+        border-radius: 20px;
+        transform-origin: top left;
+        transform: rotate(14deg) translateY(90px);
+        transition: transform 0.5s ease;
+      }
+      #pj63 {
+        position: relative;
+        height: 300px;
+        width: 100%;
+      }
+      .cnt66 {
+        background-color: rgba(223, 214, 217, 0.521);
+        padding: 50px;
+        padding-left: 30px;
+        border-radius: 30px;
+        border: 2px solid transparent;
+        transition: border 0.61s ease-in;
+        overflow: hidden;
+      }
+      .cnt66:hover {
+        border: 2px solid #14b789;
+      }
+      .cnt66:hover .pj63 {
+        transform: rotate(0deg) translateY(0px);
+      }
+
+      /* ------ section 7---*/
+      .pd77 {
+        text-align: center;
+        border: 2px solid rgba(223, 214, 217, 0.521);
+        padding: 10px 0;
+      }
+      .pd77:hover {
+        border: 2px solid #14b789;
+      }
+      .pd77 i {
+        color: #14b789;
+      }
+      .name77 {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        outline-color: #14b789;
+      }
+      .name77:hover {
+        border: 2px solid #14b789;
+      }
+
+      /* When a box is selected */
+      .box.selected {
+        background-color: #4caf50; /* Green color for selected box */
+        color: white;
+      }
+      .icon77 i {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: white;
+        border: 2px solid rgba(182, 175, 175, 0.3);
+        text-align: center;
+        align-content: center;
+      }
+      .icon77 i:hover {
+        background-color: #14b789;
+      }
+      .btn7 {
+        padding: 10px;
+        border: none;
+        margin-top: 5px;
+        margin-bottom: 0;
+        width: 80px;
+        right: 0;
+        border: 2px solid rgb(204, 206, 219);
+        border-radius: 20px;
+      }
+      .btn77 {
+        text-align: end;
+      }
+      .btn7:hover {
+        background-color: #14b789;
+        color: white;
+      }
+      .font77 {
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: justify;
+        color: grey;
+      }
+      .p7,
+      .p77 {
+        padding: 30px;
+        border-radius: 10px;
+      }
+      .p7 {
+        background-color: white;
+      }
+      .p7:nth-child(1) {
+        margin-left: 10px;
+      }
+      .p77 {
+        padding-right: 0px;
+      }
+
+      .boxi.selection {
+        border: 2px solid rgb(19, 27, 193);
+      }
+
+      .nav a.active {
+        text-decoration: underline;
+        color: #14b789; /* Change color when active */
+      }
+      .navActive {
+        text-underline-offset: 13px;
+      }
+      .navActive,
+      .first,
+      #call,
+      .pno {
+        padding: 8px;
+        align-items: center;
+      }
+      .first {
+        margin-top: 5px;
+      }
+      .navActive:hover {
+        color: #14b789;
+        text-decoration: underline;
+        text-decoration-color: #07357a;
+      }
+      .marginset {
+        margin-left: 12px;
+      }
+      footer {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 40px;
+        margin-right: 100px;
+      }
+
+      .rectangle {
+        width: 100%;
+        height: 200px;
+        border: 2px solid rgb(163, 166, 168);
+        color: rgb(24, 10, 10);
+        position: relative;
+        background-color: white;
+      }
+      .message {
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        top: 1px;
+        font-size: 24px;
+        color: grey;
+      }
+      .rectangle:hover {
+        border: 2px solid #14b789;
+      }
+      #h3 {
+        font-size: 22px;
+        padding: 10px 0;
+      }
+
+      textarea {
+        position: absolute;
+        top: 25px;
+        outline: none;
+        border: none;
+      }
+      @media (max-width: 375px) {
+        .row-tab {
+          flex-direction: column;
+          width:fit-content;
+        }
+        .pj63 {
+          width: 100%;
+        }
+        .menu-icon {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          cursor: pointer;
+        }
+
+        .menu-icon .dot {
+          width: 25px;
+          height: 5px;
+          margin: 2px;
+          background-color: rgb(235, 10, 148);
+          border-radius: 5px;
+        }
+        /* Navigation container */
+        nav {
+          position: relative;
+        }
+
+        /* Initially hide the navigation menu */
+        #nav-menu {
+          list-style-type: none;
+          background-color: rgb(156, 236, 236);
+          padding: 10px;
+          display: none; /* Hidden initially */
+          position: absolute;
+          top: 40px; /* Position below the three dots */
+          left: 0;
+          border-radius: 5px;
+        }
+
+        #nav-menu li {
+          padding: 10px;
+          color: black;
+          cursor: pointer;
+        }
+        .menu-icon .cross {
+          display: none;
+        }
+        /* Optional: Add a hover effect */
+        .menu-icon:hover .dot {
+          background-color: #be1c1c;
+        }
+
+        /* When the menu is active (navbar shown) */
+        .menu-icon.open .cross {
+          display: inline-block;
+        }
+
+        .menu-icon.open .cross i {
+          font-size: 30px;
+          color: rgb(209, 206, 20);
+        }
+        .col-6,
+        .col-12 {
+          width: 100%;
+        }
+        #sct1 {
+          height: 100%;
+          border: 2px solid blue;
+        }
+        .box3 {
+          padding: 4px;
+          margin: 0;
+          font-size: 22px;
+        }
+        .box2 {
+          margin-top: 5px;
+          padding: 3%;
+        }
+        #img1 {
+          width: 50px;
+          height: 50px;
+        }
+        #crc {
+          width: 250px;
+          height: 250px;
+        }
+        .col-1 {
+          padding: 0px;
+        }
+        .box {
+          padding: 10px;
+          margin: 10px;
+        }
+        .alignleft {
+          margin-left: 20px;
+        }
+        #img2 {
+          width: 100%;
+        }
+        #man {
+          margin-top: 50px;
+          width: 290px;
+          height: 210px;
+        }
+        table th {
+          font-size: 100%;
+        }
+        table td:nth-child(2) {
+          font-size: 100%;
+        }
+        #nm3 {
+          font-size: 100%;
+        }
+        #digits3 {
+          font-size: 100%;
+        }
+
+        td {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        .col-3 {
+          font-weight: bold;
+          margin-bottom: 5px; /* Add margin for spacing */
+        }
+
+        .col-9 {
+          margin-bottom: 10px; /* Add margin for spacing between rows */
+        }
+        h3 {
+          font-size: 80%;
+        }
+        .row-company {
+        }
+        textarea {
+          width: 100%;
+          height: 80%;
+        }
+
+        .sect6,
+        .sect7,
+        #sect2,
+        #sect3 {
+          margin: 0;
+        }
+        .pd5 {
+          display: flex;
+          flex-direction: column;
+          font-size: 20px;
+        }
+        #sect21,
+        .sect5 {
+          padding: 0;
+          margin: 0;
+        }
+        .hideservice {
+          display: inline;
+        }
+        .servicebox {
+          width: 90%;
+          height: 90%;
+        }
+        .dont {
+          height: 60%;
+        }
+        .nav li {
+          font-size: 10px;
+        }
+        .cnt66 {
+          padding: 10px;
+          text-align: center;
+        }
+        .col-sm-12 {
+          flex: 0 0 calc(100% / 12 * 12 - 10px);
+          /* Full width */
+        }
+        .col-sm-3 {
+          flex: 0 0 calc(100% / 12 * 3 - 10px);
+          /* 3/12th of the width */
+        }
+        .btn7 {
+          width: 100%;
+        }
+        .btn-sm {
+          background-color: #14b789;
+        }
+        .btn7:hover {
+          background-color: #14b789;
+        }
+        .btn-sm.clicked {
+          background-color: #07357a;
+        }
+        .hidekaro {
+          display: none;
+        }
+        .mainhide {
+          display: inline;
+        }
+        #img3 {
+          width: 90%;
+          height: 29px;
+          margin-left: 7px;
+          transition: transform 0.3s ease-in;
+        }
+        .sect4 {
+          padding: 0px;
+          margin: 0px;
+        }
+        .sect4 h1 {
+          font-size: 20px;
+        }
+        #h3 {
+          font-size: 25px;
+          padding: 10px 0;
+        }
+        footer {
+          display: flex;
+          flex-direction: column;
+          margin-right: 0px;
+          justify-content: space-evenly;
+        }
+      }
+      @media (min-width: 376px) and (max-width: 468px) {
+        .row-tab {
+          flex-direction: column;
+        }
+        .menu-icon {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          cursor: pointer;
+        }
+
+        .menu-icon .dot {
+          width: 25px;
+          height: 5px;
+          margin: 2px;
+          background-color: rgb(235, 10, 148);
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
+        /* Navigation container */
+        nav {
+          position: relative;
+        }
+
+        /* Initially hide the navigation menu */
+        #nav-menu {
+          list-style-type: none;
+          background-color: #a0bbe4;
+          padding: 10px;
+          display: none; /* Hidden initially */
+          position: absolute;
+          top: 40px; /* Position below the three dots */
+          left: 0;
+          border-radius: 5px;
+        }
+
+        #nav-menu li {
+          padding: 10px;
+          color: black;
+          cursor: pointer;
+        }
+        .menu-icon .cross {
+          display: none;
+        }
+        /* Optional: Add a hover effect */
+        .menu-icon:hover .dot {
+          background-color: #be1c1c;
+        }
+
+        /* When the menu is active (navbar shown) */
+        .menu-icon.open .cross {
+          display: inline-block;
+        }
+
+        .menu-icon.open .cross i {
+          font-size: 30px;
+          color: rgb(209, 206, 20);
+        }
+
+        .col-6,
+        .col-12 {
+          width: 100%;
+        }
+        #sct1 {
+          height: 100%;
+          border: 2px solid blue;
+        }
+        .box3 {
+          padding: 4px;
+          margin: 0;
+          font-size: 22px;
+        }
+        .box2 {
+          margin-top: 5px;
+          padding: 3%;
+        }
+        #img1 {
+          width: 50px;
+          height: 50px;
+        }
+        #crc {
+          width: 250px;
+          height: 250px;
+        }
+        .col-1 {
+          padding: 0px;
+        }
+        .box {
+          padding: 10px;
+          margin: 10px;
+        }
+        .alignleft {
+          margin-left: 20px;
+        }
+        #img2 {
+          width: 100%;
+        }
+        #man {
+          margin-top: 50px;
+          width: 290px;
+          height: 210px;
+        }
+        table th {
+          font-size: 100%;
+        }
+        table td:nth-child(2) {
+          font-size: 100%;
+        }
+        #nm3 {
+          font-size: 100%;
+        }
+        #digits3 {
+          font-size: 100%;
+        }
+
+        h3 {
+          font-size: 80%;
+        }
+        .row-company {
+        }
+        textarea {
+          width: 100%;
+          height: 80%;
+        }
+
+        .sect6,
+        .sect7,
+        #sect2,
+        #sect3 {
+          margin: 0;
+        }
+        .pd5 {
+          display: flex;
+          flex-direction: column;
+          font-size: 20px;
+        }
+        #sect21,
+        .sect5 {
+          padding: 0;
+          margin: 0;
+        }
+        .hideservice {
+          display: inline;
+        }
+        .servicebox {
+          width: 70%;
+          height: 90%;
+        }
+        .dont {
+          height: 60%;
+        }
+        .nav li {
+          font-size: 10px;
+        }
+        .cnt66 {
+          padding: 10px;
+          text-align: center;
+        }
+        .col-sm-12 {
+          flex: 0 0 calc(100% / 12 * 12 - 10px);
+          /* Full width */
+        }
+        .col-sm-3 {
+          flex: 0 0 calc(100% / 12 * 3 - 10px);
+          /* 3/12th of the width */
+        }
+        .btn7 {
+          width: 100%;
+        }
+        .btn-sm {
+          background-color: #14b789;
+        }
+        .btn7:hover {
+          background-color: #14b789;
+        }
+        .btn-sm.clicked {
+          background-color: #07357a;
+        }
+        .hidekaro {
+          display: none;
+        }
+        .mainhide {
+          display: inline;
+        }
+        #img3 {
+          width: 100%;
+          height: 29px;
+          margin-left: 7px;
+          transition: transform 0.3s ease-in;
+        }
+        .sect4 {
+          padding: 0px;
+          margin: 0px;
+        }
+        .sect4 h1 {
+          font-size: 20px;
+        }
+        footer {
+          display: flex;
+          flex-direction: column;
+          margin-right: 0px;
+          justify-content: space-evenly;
+        }
+      }
+      @media (min-width: 469px) and (max-width: 720px) {
+        .row-tab {
+          flex-direction: column;
+        }
+        #sct1 {
+          height: 300vh;
+        }
+        .col-6,
+        .col-12 {
+          width: 100%;
+        }
+        #sct1 {
+          height: 100%;
+          border: 2px solid blue;
+        }
+        .box3 {
+          padding: 4px;
+          margin: 0;
+          font-size: 22px;
+        }
+        .box2 {
+          margin-top: 5px;
+          padding: 3%;
+        }
+        #img1 {
+          width: 50px;
+          height: 50px;
+        }
+        #crc {
+          width: 250px;
+          height: 250px;
+        }
+        .col-1 {
+          padding: 0px;
+        }
+        .box {
+          padding: 10px;
+          margin: 10px;
+        }
+        .alignleft {
+          margin-left: 20px;
+        }
+        #img2 {
+          width: 100%;
+        }
+        #man {
+          margin-top: 50px;
+          width: 290px;
+          height: 210px;
+        }
+        table th {
+          font-size: 22px;
+        }
+        table td:nth-child(2) {
+          font-size: 18px;
+        }
+        #nm3 {
+          font-size: 18px;
+        }
+        #digits3 {
+          font-size: 22px;
+        }
+        h3 {
+          font-size: 80%;
+        }
+        .row-company {
+        }
+        textarea {
+          width: 100%;
+          height: 80%;
+        }
+
+        #Services,
+        .sect4,
+        .sect6,
+        .sect7,
+        #sect2,
+        #sect3 {
+          margin: 0 60px;
+        }
+        .pd5 {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .sect5 {
+          padding: 0;
+          margin: 10px;
+        }
+        .hideservice {
+          display: inline;
+        }
+
+        .servicebox {
+          width: 70%;
+          height: 90%;
+        }
+        .dont {
+          height: 60%;
+        }
+
+        .nav li {
+          font-size: 20px;
+        }
+        .nav {
+          width: fit-content;
+        }
+        .cnt66 {
+          padding: 10px;
+          text-align: center;
+        }
+        .col-sm-12 {
+          flex: 0 0 calc(100% / 12 * 12 - 10px);
+          /* Full width */
+        }
+        .col-sm-3 {
+          flex: 0 0 calc(100% / 12 * 3 - 10px);
+          /* 3/12th of the width */
+        }
+        .btn7 {
+          width: 100%;
+        }
+        .btn-sm {
+          background-color: #14b789;
+        }
+        .btn7:hover {
+          background-color: #14b789;
+        }
+        .btn-sm.clicked {
+          background-color: #07357a;
+        }
+        .row-company {
+        }
+        .sect4 h1 {
+          font-size: 25px;
+        }
+        #img3 {
+          width: 100%;
+          height: 69px;
+          margin-left: 10px;
+          transition: transform 0.3s ease-in;
+        }
+        footer {
+          display: flex;
+          flex-direction: column;
+          margin-right: 0px;
+          justify-content: space-evenly;
+          padding: 0 90px;
+        }
+      }
+
+      @media (min-width: 721px) and (max-width: 1028px) {
+        .row-tab {
+          flex-direction: column;
+        }
+        .col-6,
+        .col-12 {
+          width: 100%;
+          height: 100%;
+        }
+        #sct1 {
+          height: 100%;
+          margin: 30px;
+          border: 2px solid blue;
+        }
+        .col-4,
+        .col-3 {
+          text-align: center;
+        }
+        #img2 {
+          width: 100%;
+        }
+
+        .pd56 {
+          width: 100%;
+        }
+        .servicebox {
+          position: unset;
+          margin-left: 50%;
+        }
+        h3 {
+          font-size: 80%;
+        }
+       
+
+        #img3 {
+          width:100%;
+          height: 69px;
+          margin-left: 10px;
+          transition: transform 0.3s ease-in;
+        }
+        .pd66 {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+      }
+      li {
+        padding: 50px;
+        font-size: 30px;
+      }
+      .newbox {
+        justify-items: center;
+        align-content: center;
+      }
+      #heading11,
+      #heading12,
+      #heading13 {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+      }
+      #leftpart {
+        transform: translateY(50px);
+        padding-bottom: 20px;
+      }
+    </style>
+
+    <!-- Add some CSS for modal and slider -->
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .modal-content {
+        position: relative;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        max-width: fit-content;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .modal-content img {
+        width: auto;
+        height: 300px;
+      }
+
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: #aaa;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        font-size: 30px;
+        color: #3b56ec;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .prev {
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      .next {
+        right: 0;
+        transform: translateY(-50%);
+      }
+    </style>
+    <!-- Font Awesome CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="main">
+      <section id="Home">
+        <section id="sct1" class="boxmargin">
+          <div class="container nav" id="navbar">
+            <div class="row change">
+              <div class="col-6 col-sm-3">
+                <div class="menu-icon" onclick="toggleMenu()">
+                  <span class="cross"><i class="fa-solid fa-xmark"></i></span>
+                  <div class="icn">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                </div>
+                <ul id="nav-menu">
+                  <li class="first hidekaro">FIRST</li>
+                  <li class="navActive"><a href="#Home">HOME</a></li>
+                  <li class="navActive"><a href="#About">ABOUT</a></li>
+                  <li class="navActive"><a href="#Services">SKILLS</a></li>
+                  <li class="navActive"><a href="#Projects">PROJECTS</a></li>
+                  <li class="navActive"><a href="#Contact">CONTACT</a></li>
+                </ul>
+              </div>
+              <h1 class="mainhide">First</h1>
+              <div class="col-3 hidekaro"><span>&#8236;</span></div>
+              <div class="col-3">
+                <ul>
+                  <li id="call"><i class="fa-solid fa-phone"></i></li>
+                  <li class="pno">8431369910</li>
+                </ul>
+              </div>
+
+              <script>
+                // Toggle visibility of the navigation menu
+                function toggleMenu() {
+                  const menu = document.getElementById("nav-menu");
+                  menu.style.display =
+                    menu.style.display === "block" ? "none" : "block";
+                  // Toggle the 'open' class to transform the dots into a cross
+                  document.querySelector(".menu-icon").classList.toggle("open");
+
+                  // Toggle the 'show' class to display or hide the navbar
+                  document.querySelector(".navbar").classList.toggle("show");
+                }
+              </script>
+            </div>
+          </div>
+          <script>
+            navbar.classList.remove("scrolled");
+
+            window.addEventListener("scroll", function () {
+              const navbar = document.querySelector("#navbar");
+              navbar.classList.remove("scrolled");
+              console.log("scrolly---", window.scrollY);
+              // Check if the page is scrolled
+              if (window.scrollY > 5) {
+                // Adjust '50' as needed
+                navbar.classList.add("scrolled"); // Add the 'scrolled' class
+              } else {
+                navbar.classList.remove("scrolled"); // Remove the 'scrolled' class
+              }
+            });
+          </script>
+
+          <section id="subsct1">
+            <section>
+              <div class="container" id="Home">
+                <div class="row row-tab">
+                  <div class="col-6 newbox">
+                    <div id="leftpart">
+                      <div id="heading11">
+                        <img
+                          id="img1"
+                          src="/Images/PrasannaVB1.jpg"
+                          alt="img here"
+                        />
+                        <span class="box3">Hello Friend!</span>
+                      </div>
+                      <div class="smallgap"></div>
+                      <div id="heading12">
+                        <span class="box3"
+                          >I am Looking For New Opportunities</span
+                        >
+                      </div>
+
+                      <button id="heading13" class="box2" id="t2" type="submit">
+                        Let's Begin
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-6 alignelement">
+                    <div id="rightpart">
+                      <div id="crc">
+                        <img
+                          id="man"
+                          src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/portrait-happy-excited-man-holding-laptop-computer.png"
+                          alt="img here"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
+      </section>
+      <div class="smallgap"></div>
+      <section id="About">
+        <div id="sect2">
+          <div class="container">
+            <div class="row row-tab">
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-12">
+                    <img
+                      id="img2"
+                      src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/couple-working-from-home-together-sofa.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="row mystory">
+                  <div class="col-12 alignelement pd5 mystory marginset">
+                    <h5 id="h2">My Story</h5>
+                    <img
+                      class="img5"
+                      src="/Images/PrasannaVB1.jpg"
+                      alt="img here"
+                    />
+                  </div>
+                </div>
+                <div id="story">
+                  <div class="row storyheading">
+                    <div class="col-12">
+                      <h1 id="h3">a little bit about Prasannakumara</h1>
+                    </div>
+                  </div>
+                  <div class="row story">
+                    <div class="col-12 fontis">
+                      <p>
+                        I am PRASANNAKUMARA V BELLADA, BE 2023 passed out in the
+                        stream of ECE with 8.17 ch pa from Alvas institute of
+                        engineering and technology, Mangalore. I completed Full
+                        stack training from kodnest technologies bengaluru. I am
+                        good at JAVA, PYTHON, SQL, HTML, CSS, JS, SPRINGBOOT,
+                        FASTAPI. 
+                      </p>
+                      <br />
+                      <p>
+                        I have 6 month experience as a software
+                        engineer from Agile health technologies,bengaluru.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="sect21">
+          <div id="sect3">
+            <div class="container">
+              <div class="row row-tab">
+                <div class="col-5 smallgap">
+                  <table border="1">
+                    <div class="row">
+                      <div class="col-12">
+                        <thead>
+                          <tr>
+                            <th colspan="2">Information</th>
+                          </tr>
+                        </thead>
+                      </div>
+                    </div>
+                    <tbody>
+                      <div class="row">
+                        <tr>
+                          <div class="row-table">
+                            <div class="col-3"><td id="nm3">Name</td></div>
+                            <div class="col-9">
+                              <td>PRASANNAKUMARA V BELLADA</td>
+                            </div>
+                          </div>
+                        </tr>
+                      </div>
+                      <div class="row">
+                        <tr>
+                          <div class="col-3"><td id="nm3">Birthday</td></div>
+                          <div class="col-9"><td>May 19, 2001</td></div>
+                        </tr>
+                      </div>
+                      <div class="row">
+                        <tr>
+                          <div class="col-3"><td id="nm3">Phone</td></div>
+                          <div class="col-9"><td>8431369910</td></div>
+                        </tr>
+                      </div>
+                      <div class="row">
+                        <tr>
+                          <div class="col-3"><td id="nm3">Email</td></div>
+                          <div class="col-9"><td>prasannavb19@gmail.com</td></div>
+                        </tr>
+                      </div>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-6">
+                  <div class="row pd31">
+                    <div class="col-6 alignelement pd32">
+                      <div class="dg">
+                        <h1 id="digits3">1+</h1>
+                        <p id="nm3">Years of experience</p>
+                      </div>
+                    </div>
+                    <div class="col-6 alignelement">
+                      <div class="dg">
+                        <h1 id="digits3">2.5+</h1>
+                        <p id="nm3">Expected LPA Salary</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 alignelement pd32">
+                      <div class="dg">
+                        <h1 id="digits3">5</h1>
+                        <p id="nm3">Project Finished</p>
+                      </div>
+                    </div>
+                    <div class="col-6 alignelement">
+                      <div class="dg">
+                        <h1 id="digits3">4</h1>
+                        <p id="nm3">Certifications Awards</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sect4">
+          <div class="container">
+            <div class="row pd4">
+              <div class="col-12 alignelement">
+                <h1>Companies I have Worked</h1>
+              </div>
+            </div>
+            <div class="row leftmargin row-company">
+              <div class="col-6">
+                <img
+                  id="img3"
+                  src="/Images/AGH.png"
+                  alt="img here"
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  id="img3"
+                  src="/Images/kodnest.png"
+                  alt="img here"
+                />
+              </div>
+
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="sect21">
+        <section id="Services">
+          <div class="sect5">
+            <div class="container">
+              <div class="row mystory">
+                <div class="col-12 row-resize alignelement pd5">
+                  <img
+                    class="img5"
+                    src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/handshake-man-woman-after-signing-business-contract-closeup.jpg"
+                    alt="img here"
+                  />
+                  <h3>Skills</h3>
+                </div>
+              </div>
+
+              <div class="row pd56 row-tab">
+                <div class="col-6 image55">
+                  <div class="smallgap"></div>
+                  <div class="row">
+                    <div class="col-12 pd55">
+                      <div class="row pd51">
+                        <div class="col-12 servflex">
+                          <div><h3>Websites Design</h3></div>
+                          <div class="i5 i5c crc56">
+                            6.5/10 &nbsp;
+                            <div id="crc55"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row pd52">
+                        <div class="col-12">
+                          <p>
+                            I have enough knowledge to build a Descent Webpages using HTML,CSS,JAVASCRIPT
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-12">
+                          <div>
+                            <button class="btn55" type="submit">
+                              Discover More
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row dont">
+                        <div class="col-4 box55"></div>
+                        <div class="col-8 box55">
+                          <div class="servicebox i5c">
+                            <div class="ifont">
+                              <i class="fa-solid fa-globe"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="smallgap"></div>
+                  <div class="row">
+                    <div class="col-12 pd55">
+                      <div class="row pd51">
+                        <div class="col-12 servflex">
+                          <div><h3>Backend</h3></div>
+                          <div class="i5 i5c crc56">
+                            8/10 &nbsp;
+                            <div id="crc55"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row pd52">
+                        <div class="col-12">
+                          <p>
+                          To work in Backend I have great knowledge in Python,Java. Its OOPs concepts,Multithreading,Exception Handling.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-12">
+                          <div>
+                            <button class="btn55" type="submit">
+                              Discover More
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row dont">
+                        <div class="col-4 box55"></div>
+                        <div class="col-8 box55">
+                          <div class="servicebox i5c">
+                            <div class="ifont">
+                              <i class="fa-regular fa-lightbulb"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="smallgap hideservice"></div>
+                <div class="col-6 image55">
+                  <div class="smallgap"></div>
+                  <div class="row">
+                    <div class="col-12 pd55">
+                      <div class="row pd51">
+                        <div class="col-12 servflex">
+                          <div><h3>Rest API</h3></div>
+                          <div class="i5 i5c crc56">
+                            9/10 &nbsp;
+                            <div id="crc55"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row pd52">
+                        <div class="col-12">
+                          <p>
+                            I have great knowledge in Creating API urls by using FastAPI,Which plays crucial role in web development.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-12">
+                          <div>
+                            <button class="btn55" type="submit">
+                              Discover More
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row dont">
+                        <div class="col-4 box55"></div>
+                        <div class="col-8 box55">
+                          <div class="servicebox i5c">
+                            <div class="ifont">
+                              <i class="fa-solid fa-tape"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="smallgap"></div>
+
+                  <div class="row">
+                    <div class="col-12 pd55">
+                      <div class="row pd51">
+                        <div class="col-12 servflex">
+                          <div><h3>Database Connection</h3></div>
+                          <div class="i5 i5c crc56">
+                          9/10 &nbsp;
+                            <div id="crc55"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row pd52">
+                        <div class="col-12">
+                          <p>
+                            I am very much familiar with SQLAlchemy,Psycopg2 libraries which helps to interact with relatinal databases in Python.
+                            In java springboot or hibernate helps in database connectivity.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-12">
+                          <div>
+                            <button class="btn55" type="submit">
+                              Discover More
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row dont">
+                        <div class="col-4 box55"></div>
+                        <div class="col-8 box55">
+                          <div class="servicebox i5c">
+                            <div class="ifont">
+                              <i class="fa-solid fa-database"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section id="Projects">
+        <div class="sect6">
+          <div class="smallgap"></div>
+          <div class="smallgap"></div>
+          <div class="smallgap"></div>
+          <div class="container">
+            <div class="row row-resize">
+              <div class="col-4"></div>
+              <div class="col-8 col-sm-12 alignelement pd5 mystory">
+                <img
+                  class="img5"
+                  src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/white-desk-work-study-aesthetics.jpg"
+                  alt="img here"
+                />
+                <h3>Projects</h3>
+              </div>
+            </div>
+
+            <div class="smallgap"></div>
+
+            <div class="row pd66 row-tab">
+              <div class="col-4 cnt66">
+                <div class="row pj61">
+                  <div class="col-12"><div>SPRINGBOOT,JAVA</div></div>
+                </div>
+                <div class="row pj62">
+                  <div class="col-12">
+                    <div>MovieFlix</div>
+                  </div>
+                </div>
+                <div class="smallgap"></div>
+                <div class="row">
+                  <div class="col-12">
+                    <div id="pj63" onclick="openModal(0)">
+                      <img
+                        class="pj63"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpB3x5owgzhYRRvJhFzNL_-D9Rys2sd945WA&s"
+                        alt="image here"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 cnt66">
+                <div class="row pj61">
+                  <div class="col-12"><div>FastAPI,Python</div></div>
+                </div>
+                <div class="row pj62">
+                  <div class="col-12">
+                    <div>User-Admin Management System</div>
+                  </div>
+                </div>
+                <div class="smallgap"></div>
+                <div class="row">
+                  <div class="col-12">
+                    <div id="pj63" onclick="openModal(1)">
+                      <img
+                        class="pj63"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HkMTcq5uTjITPOVhv9Rmznke9cLoARWQqg&s"
+                        alt="image here"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 cnt66">
+                <div class="row pj61">
+                  <div class="col-12"><div>Python</div></div>
+                </div>
+                <div class="row pj62">
+                  <div class="col-12">
+                    <div>Employee Management System</div>
+                  </div>
+                </div>
+                <div class="smallgap"></div>
+                <div class="row">
+                  <div class="col-12">
+                    <div id="pj63" onclick="openModal(2)">
+                      <img
+                        class="pj63"
+                        src="data:image/jpeg;base64,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"
+                        alt="image here"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal for Image Slider -->
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <div class="modal-slides">
+            <img id="modalImage" src="" alt="Modal Image" />
+          </div>
+        </div>
+        <button class="prev" onclick="changeImage(-1)">&#10093;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+      </div>
+      <script>
+        var currentSlide = 0;
+        var images = [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpB3x5owgzhYRRvJhFzNL_-D9Rys2sd945WA&s",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-HkMTcq5uTjITPOVhv9Rmznke9cLoARWQqg&s",
+          "data:image/jpeg;base64,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",
+        ];
+
+        // Open modal and show the clicked image
+        function openModal(index) {
+          currentSlide = index;
+          document.getElementById("myModal").style.display = "block";
+          document.getElementById("modalImage").src = images[currentSlide];
+        }
+
+        // Close the modal
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+
+        // Change image on slider
+        function changeImage(direction) {
+          currentSlide += direction;
+          if (currentSlide < 0) currentSlide = images.length - 1;
+          if (currentSlide >= images.length) currentSlide = 0;
+          document.getElementById("modalImage").src = images[currentSlide];
+        }
+
+        // Close modal when clicking outside of the image
+        window.onclick = function (event) {
+          if (event.target === document.getElementById("myModal")) {
+            closeModal();
+          }
+        };
+      </script>
+
+      <section id="Contact">
+        <div class="sect7">
+          <div class="container">
+            <div class="row row-resize">
+              <div class="col-6 col-sm-12 alignelement pd5 mystory marginset">
+                <img
+                  class="img5"
+                  src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/aerial-view-man-using-computer-laptop-wooden-table.jpg"
+                  alt="img here"
+                />
+                <h3>Say Hi</h3>
+              </div>
+            </div>
+
+            <div class="smallgap"></div>
+
+            <div class="row row-tab">
+              <div class="col-3 p7">
+                <div class="row">
+                  <div class="col-12">
+                    <h5>Skills</h5>
+                  </div>
+                </div>
+
+                <div class="smallgap"></div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <span class="btn7">Frontend</span>
+                  </div>
+                  <div class="col-6">
+                    <span class="btn7">Rest API's</span>
+                  </div>
+                </div>
+
+                <div class="smallgap"></div>
+                <div class="row">
+                  <div class="col-6">
+                    <span class="btn7">Backend</span>
+                  </div>
+
+                  <div class="col-6">
+                    <span class="btn7">DataBase</span>
+                  </div>
+                </div>
+
+                <div class="smallgap"></div>
+                <div class="row">
+                  <div class="col-12">
+                    <h5>STAY CONNECTED</h5>
+                  </div>
+                </div>
+
+                <div class="smallgap"></div>
+                <div class="row">
+                  <div class="col-3 icon77">
+                    <div><i class="fa-brands fa-twitter"></i></div>
+                  </div>
+
+                  <div class="col-3 icon77">
+                    <div><i class="fa-brands fa-instagram"></i></div>
+                  </div>
+
+                  <div class="col-3 icon77">
+                    <div><i class="fa-brands fa-pinterest-p"></i></div>
+                  </div>
+
+                  <div class="col-3 icon77">
+                    <div><i class="fa-brands fa-youtube"></i></div>
+                  </div>
+                </div>
+
+                <div class="smallgap"></div>
+                <div class="row">
+                  <div class="col-12">
+                    <h5>Hire Me</h5>
+                  </div>
+                </div>
+                <br />
+                <div class="row font77">
+                  <div class="col-12">
+                    <div>I’m ready to contribute to the growth of company through my skills</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 p7">
+                <div class="row">
+                  <div class="col-12">
+                    <h5>ABOUT</h5>
+                  </div>
+                </div>
+
+                <br />
+                <div class="row font77">
+                  <div class="col-12">
+                    <div>
+                      Prasannakumara is a tech enthusiast, Looking for new opportunities which take him to further growth possibilities.
+                    </div>
+                  </div>
+                </div>
+                <div class="smallgap"></div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <h5>EMAIL</h5>
+                  </div>
+                </div>
+
+                <br />
+                <div class="row font77">
+                  <div class="col-12">
+                    <div>prasannavb19@gmail.com</div>
+                  </div>
+                </div>
+
+                <div class="smallgap"></div>
+                <div class="row">
+                  <div class="col-12">
+                    <h5>CALL</h5>
+                  </div>
+                </div>
+
+                <br />
+                <div class="row font77">
+                  <div class="col-12">
+                    <div>8431369910</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 p77">
+                <div class="row smallmargin">
+                  <div class="col-6">
+                    <input class="name77" type="text" placeholder="Name" />
+                  </div>
+                  <div class="col-6">
+                    <input class="name77" type="text" placeholder="Email" />
+                  </div>
+                </div>
+
+                <div class="smallgap"></div>
+                <div class="row alignelement">
+                  <div class="col-3 pd77 boxi">
+                    <div class="row">
+                      <div class="col-12">
+                        <i class="fa-solid fa-globe"></i>
+                      </div>
+                    </div>
+                    <div>Frontend</div>
+                  </div>
+                  <div class="col-3 pd77 boxi">
+                    <div class="row">
+                      <div class="col-12">
+                        <i class="fa-solid fa-tape"></i>
+                      </div>
+                    </div>
+                    <div>RestAPI</div>
+                  </div>
+                  <div class="col-3 pd77 boxi">
+                    <div class="row">
+                      <div class="col-12">
+                        <i class="fa-regular fa-lightbulb"></i>
+                      </div>
+                    </div>
+                    <div>Backend</div>
+                  </div>
+                  <div class="col-3 pd77 boxi">
+                    <div class="row">
+                      <div class="col-12">
+                        <i class="fa-solid fa-database"></i>
+                      </div>
+                    </div>
+                    <div>Database</div>
+                  </div>
+                </div>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const boxes = document.querySelectorAll(".boxi");
+                    boxes.forEach((box) => {
+                      box.addEventListener("click", function () {
+                        box.classList.toggle("selection");
+                      });
+                    });
+                  });
+                </script>
+                <div class="smallgap"></div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="rectangle">
+                      <div class="message">Tell me what I can do for you?</div>
+                      <textarea
+                        name=""
+                        id="textarea"
+                        cols="71"
+                        rows="11"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-8"></div>
+                  <div class="col-4 col-sm-12 btn77">
+                    <button
+                      class="btn7 btn-sm"
+                      type="submit"
+                      onclick="changeBackgroundColor()"
+                    >
+                      Submit
+                    </button>
+                    <script>
+                      function changeBackgroundColor() {
+                        var select = document.querySelector(".btn-sm");
+                        select.classList.add(`clicked`);
+                      }
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          Copyright © 2036 First Portfolio Company. All rights reserved.
+        </div>
+        <div>Design: TemplateMo</div>
+      </footer>
+    </div>
+
+    <!------- Java Script  -->
+    <script>
+      function toggleSelection(boxElement) {
+        // Toggle the 'selected' class on the clicked box in Contact section
+        boxElement.classList.toggle("selected");
+      }
+    </script>
+    <!--- Highlighting section wise in navigation bar-->
+    <script>
+      function setActiveSection() {
+        // Get all the sections
+        const sections = document.querySelectorAll("section");
+        // Get all the nav links
+        const navLinks = document.querySelectorAll(".nav a");
+
+        // Listen for scroll events
+        window.addEventListener("scroll", () => {
+          let current = "";
+
+          // Loop through each section to check which one is in view
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= sectionTop - 60) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          // Remove 'active' class from all nav links
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+              link.classList.add("active"); // Add 'active' class to the current section's nav link
+            }
+          });
+        });
+      }
+
+      window.addEventListener("DOMContentLoaded", function () {
+        window.scrollTo(0, 0); // Scroll to the top-left corner of the page
+        const navLinks = document.querySelectorAll(".nav a");
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").includes("Home")) {
+            link.classList.add("active"); // Add 'active' class to the current section's nav link
+          }
+        });
+      });
+      // Listen for scroll events
+      window.addEventListener("scroll", setActiveSection);
+      window.addEventListener("DOMContentLoaded", setActiveSection); //To ensure home is underlined initially
+    </script>
+
+    <!--  For textarea-->
+    <script>
+      const textarea = document.getElementById("textarea");
+
+      // Add event listener for focus event
+      textarea.addEventListener("focus", function () {
+        const message = this.previousElementSibling; // Get the previous sibling (the .message div)
+        message.style.fontSize = "15px"; // Change font size when textarea is focused
+      });
+
+      // Optional: Reset message style when textarea loses focus
+      textarea.addEventListener("blur", function () {
+        const message = this.previousElementSibling;
+        message.style.fontSize = "24px"; // Reset font size
+        message.style.top = "1px"; // Reset top position
+      });
+    </script>
+  </body>
+</html>
