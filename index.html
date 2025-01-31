@@ -19,6 +19,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Roboto', 'Arial', sans-serif;
       }
 
       /* Container and Row */
@@ -110,8 +111,6 @@
         background-color: #535da1;
         height: 600px;
         overflow: hidden;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif;
       }
       .menu-icon .cross {
         display: none;
@@ -170,7 +169,6 @@
 
       .first {
         color: white;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       }
       .nav {
         position: fixed;
@@ -243,8 +241,11 @@
         border: none;
         background-color: aqua;
         border-radius: 60px;
-        font-size: 22px;
         font-weight: bold;
+        width:fit-content;
+      }
+      .box2 a{
+        font-size: 22px;
       }
 
       .box2:hover {
@@ -328,7 +329,6 @@
       #story {
         padding: 10px;
         line-height: 1.5;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         text-align: justify;
       }
 
@@ -415,8 +415,6 @@
       .pd4 {
         padding: 10px;
         font-size: 25px;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-          sans-serif;
       }
       #img3 {
         width: 90%;
@@ -519,7 +517,6 @@
         text-align: justify;
         line-height: 1.5;
         color: grey;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
       .btn55 {
         border: rgba(128, 128, 128, 0.3);
@@ -563,13 +560,11 @@
         padding-left: 10px;
       }
       .pj61 {
-        font-family: "Times New Roman", Times, serif;
         color: #14b789;
       }
       .pj62 {
         font-size: 30px;
         font-weight: bold;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
       .pj63 {
         width: 300px;
@@ -746,7 +741,7 @@
       @media (max-width: 375px) {
         .row-tab {
           flex-direction: column;
-          width:fit-content;
+          width: fit-content;
         }
         .pj63 {
           width: 100%;
@@ -877,10 +872,6 @@
         h3 {
           font-size: 80%;
         }
-        #h3{
-        font-size:5vw;
-        }
-        
         textarea {
           width: 100%;
           height: 80%;
@@ -959,7 +950,7 @@
           font-size: 20px;
         }
         #h3 {
-          font-size: 25px;
+          font-size: 5vw;
           padding: 10px 0;
         }
         footer {
@@ -1037,9 +1028,10 @@
           border: 2px solid blue;
         }
         .box3 {
-          padding: 4px;
+          padding: 5px;
           margin: 0;
           font-size: 22px;
+          padding-left: 20px;
         }
         .box2 {
           margin-top: 5px;
@@ -1087,7 +1079,13 @@
         h3 {
           font-size: 80%;
         }
-
+        #h3 {
+          font-size: 5vw;
+          white-space: nowrap;
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+          max-width: 100%;
+        }
         textarea {
           width: 100%;
           height: 80%;
@@ -1235,9 +1233,8 @@
           font-size: 22px;
         }
         h3 {
-          font-size: 80%;
+          font-size: 25px;
         }
-     
         textarea {
           width: 100%;
           height: 80%;
@@ -1302,7 +1299,6 @@
         .btn-sm.clicked {
           background-color: #07357a;
         }
-       
         .sect4 h1 {
           font-size: 25px;
         }
@@ -1350,13 +1346,9 @@
           position: unset;
           margin-left: 50%;
         }
-        h3 {
-          font-size: 80%;
-        }
-       
 
         #img3 {
-          width:100%;
+          width: 100%;
           height: 69px;
           margin-left: 10px;
           transition: transform 0.3s ease-in;
@@ -1449,6 +1441,12 @@
       .next {
         right: 0;
         transform: translateY(-50%);
+      }
+      iframe {
+        display: none;
+      }
+      span a{
+        display: inline;
       }
     </style>
     <!-- Font Awesome CSS -->
@@ -1544,9 +1542,20 @@
                         >
                       </div>
 
-                      <button id="heading13" class="box2" id="t2" type="submit">
-                        Let's Begin
-                      </button>
+                      <span id="heading13" class="box2">
+                        <a
+                          href="./Resume/ResumeOfPrasannaKumara3.4.pdf"
+                          target="_blank"
+                        >
+                          Let's Begin
+                        </a>
+                      </span>
+
+                      <iframe
+                        src="https://docs.google.com/viewer?url=YOUR_PDF_URL&embedded=true"
+                        width="100%"
+                        height="600px"
+                      ></iframe>
                     </div>
                   </div>
                   <div class="col-6 alignelement">
@@ -1596,7 +1605,7 @@
                 <div id="story">
                   <div class="row">
                     <div class="col-12">
-                      <h1 id="h3">a little bit about Prasannakumara</h1>
+                      <span id="h3">a little bit about Prasannakumara</span>
                     </div>
                   </div>
                   <div class="row story">
@@ -1607,12 +1616,12 @@
                         engineering and technology, Mangalore. I completed Full
                         stack training from kodnest technologies bengaluru. I am
                         good at JAVA, PYTHON, SQL, HTML, CSS, JS, SPRINGBOOT,
-                        FASTAPI. 
+                        FASTAPI.
                       </p>
                       <br />
-                      <p>
-                        I have 6 month experience as a software
-                        engineer from Agile health technologies,bengaluru.
+                      <p style="word-wrap: break-word; width:100%;">
+                        I have 6 month experience as a software engineer from
+                        Agile health technologies,bengaluru.
                       </p>
                     </div>
                   </div>
@@ -1663,7 +1672,9 @@
                       <div class="row">
                         <tr>
                           <div class="col-3"><td id="nm3">Email</td></div>
-                          <div class="col-9"><td>prasannavb19@gmail.com</td></div>
+                          <div class="col-9">
+                            <td>prasannavb19@gmail.com</td>
+                          </div>
                         </tr>
                       </div>
                     </tbody>
@@ -1713,21 +1724,11 @@
             </div>
             <div class="row leftmargin">
               <div class="col-6">
-                <img
-                  id="img3"
-                  src="./Images/AGH.png"
-                  alt="img here"
-                />
+                <img id="img3" src="/Images/AGH.png" alt="img here" />
               </div>
               <div class="col-6">
-                <img
-                  id="img3"
-                  src="./Images/kodnest.png"
-                  alt="img here"
-                />
+                <img id="img3" src="/Images/kodnest.png" alt="img here" />
               </div>
-
-             
             </div>
           </div>
         </div>
@@ -1766,7 +1767,8 @@
                       <div class="row pd52">
                         <div class="col-12">
                           <p>
-                            I have enough knowledge to build a Descent Webpages using HTML,CSS,JAVASCRIPT
+                            I have enough knowledge to build a Descent Webpages
+                            using HTML,CSS,JAVASCRIPT
                           </p>
                         </div>
                       </div>
@@ -1809,7 +1811,8 @@
                       <div class="row pd52">
                         <div class="col-12">
                           <p>
-                          To work in Backend I have great knowledge in Python,Java. Its OOPs concepts,Multithreading,Exception Handling.
+                            To work in Backend I have great knowledge in
+                            Python,Java. Its OOPs concepts, Multithreading, Exception Handling.
                           </p>
                         </div>
                       </div>
@@ -1855,7 +1858,8 @@
                       <div class="row pd52">
                         <div class="col-12">
                           <p>
-                            I have great knowledge in Creating API urls by using FastAPI,Which plays crucial role in web development.
+                            I have great knowledge in Creating API urls by using
+                            FastAPI,Which plays crucial role in web development.
                           </p>
                         </div>
                       </div>
@@ -1890,7 +1894,7 @@
                         <div class="col-12 servflex">
                           <div><h3>Database Connection</h3></div>
                           <div class="i5 i5c crc56">
-                          9/10 &nbsp;
+                            9/10 &nbsp;
                             <div id="crc55"></div>
                           </div>
                         </div>
@@ -1899,8 +1903,10 @@
                       <div class="row pd52">
                         <div class="col-12">
                           <p>
-                            I am very much familiar with SQLAlchemy,Psycopg2 libraries which helps to interact with relatinal databases in Python.
-                            In java springboot or hibernate helps in database connectivity.
+                            I am very much familiar with SQLAlchemy,Psycopg2
+                            libraries which helps to interact with relatinal
+                            databases in Python. In java springboot or hibernate
+                            helps in database connectivity.
                           </p>
                         </div>
                       </div>
@@ -2154,7 +2160,10 @@
                 <br />
                 <div class="row font77">
                   <div class="col-12">
-                    <div>I’m ready to contribute to the growth of company through my skills</div>
+                    <div>
+                      I’m ready to contribute to the growth of company through
+                      my skills
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2169,7 +2178,9 @@
                 <div class="row font77">
                   <div class="col-12">
                     <div>
-                      Prasannakumara is a tech enthusiast, Looking for new opportunities which take him to further growth possibilities.
+                      Prasannakumara is a tech enthusiast, Looking for new
+                      opportunities which take him to further growth
+                      possibilities.
                     </div>
                   </div>
                 </div>
@@ -2299,9 +2310,9 @@
 
       <footer>
         <div>
-          Copyright © 2025 MYPORTFOLIO. All rights reserved.
+          Copyright © 2036 First Portfolio Company. All rights reserved.
         </div>
-        <div>PRASANNAKUMARA V BELLADA</div>
+        <div>Design: TemplateMo</div>
       </footer>
     </div>
 
